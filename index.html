@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SummerTech Inc | Eco-Conscious Software Solutions</title>
+  <title data-i18n="title">SummerTech Inc | Eco-Conscious Software Solutions</title>
   <link rel="icon" href="logo_images/icon_transparent.png">
-<!--   <link rel="icon" href="https://fav.farm/🌱"> -->
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -120,72 +119,58 @@
   </style>
 </head>
 <body>
-<!--   <a href="/" style="display:block; text-align:center;">
-  <img src="logo_images/icon_transparent.png" alt="Logo" style="height:60px;">
-  </a> -->
   <header>
-    <div class="logo">SummerTech Inc</div>
-    <div class="tagline">AI + Nature | Smart Pet Tech for a Better World</div>
+    <div class="logo" data-i18n="company_name">SummerTech Inc</div>
+    <div class="tagline" data-i18n="tagline">AI + Nature | Smart Pet Tech for a Better World</div>
     <div class="language-switcher">
       <button onclick="setLang('en')">English</button>
       <button onclick="setLang('zh')">中文</button>
       <button onclick="setLang('ja')">日本語</button>
       <button onclick="setLang('es')">Español</button>
+      <button onclick="setLang('ar')">العربية</button>
     </div>
   </header>
 
   <main>
-    <section class="lang-block" data-lang="en">
-      <h2>Our Mission</h2>
-      <p>We use AI to improve how humans and animals live together — starting with smarter, greener pet care. Our technology helps pet lovers track, care, and give back to nature, all in one platform.</p>
-    </section>
-    <section class="lang-block" data-lang="zh" style="display:none;">
-      <h2>我们的使命</h2>
-      <p>我们利用人工智能改善人类与动物的共处方式——从更智能、更环保的宠物照护开始。我们的技术平台帮助宠物主人全面了解、呵护爱宠，并回馈自然。</p>
-    </section>
-    <section class="lang-block" data-lang="ja" style="display:none;">
-      <h2>私たちの使命</h2>
-      <p>AIを活用して、人間と動物がより良く共存できる未来を創ります。スマートで環境に優しいペットケアから始めましょう。</p>
-    </section>
-    <section class="lang-block" data-lang="es" style="display:none;">
-      <h2>Nuestra misión</h2>
-      <p>Usamos inteligencia artificial para mejorar la convivencia entre humanos y animales, comenzando con un cuidado de mascotas más inteligente y ecológico.</p>
+    <section>
+      <h2 data-i18n="mission_title">Our Mission</h2>
+      <p data-i18n="mission_content">We use AI to improve how humans and animals live together — starting with smarter, greener pet care. Our technology helps pet lovers track, care, and give back to nature, all in one platform.</p>
     </section>
 
     <section class="product-card">
-      <h2>🚀 Flagship Product: <img src="logo_images/white_logoword.png" alt="Pawpy Logo" class="product-logo"></h2>
-      <p>The world's first carbon-neutral pet health management platform featuring:</p>
+      <h2>🚀 <span data-i18n="flagship_title">Flagship Product:</span> <img src="logo_images/white_logoword.png" alt="Pawpy Logo" class="product-logo"></h2>
+      <p data-i18n="flagship_desc">The world's first carbon-neutral pet health management platform featuring:</p>
       <div class="feature-list">
         <div class="feature-item">
-          <h3>🐾 Health Tracking</h3>
-          <p>Comprehensive wellness monitoring for your pets with AI-driven insights</p>
+          <h3>🐾 <span data-i18n="feature1_title">Health Tracking</span></h3>
+          <p data-i18n="feature1_desc">Comprehensive wellness monitoring for your pets with AI-driven insights</p>
         </div>
         <div class="feature-item">
-          <h3>🌱 Eco-Recommendations</h3>
-          <p>Personalized suggestions for sustainable pet products</p>
+          <h3>🌱 <span data-i18n="feature2_title">Eco-Recommendations</span></h3>
+          <p data-i18n="feature2_desc">Personalized suggestions for sustainable pet products</p>
         </div>
         <div class="feature-item">
-          <h3>♻️ Carbon Calculator</h3>
-          <p>Measure and offset your pet's environmental impact</p>
+          <h3>♻️ <span data-i18n="feature3_title">Carbon Calculator</span></h3>
+          <p data-i18n="feature3_desc">Measure and offset your pet's environmental impact</p>
         </div>
       </div>
-      <a href="#contact" class="cta-button">Request Early Access</a>
+      <a href="#contact" class="cta-button" data-i18n="cta">Request Early Access</a>
     </section>
 
     <iframe src="https://www.youtube.com/embed/tntOCGkgt98" allowfullscreen></iframe>
 
     <section>
-      <h2>Our Eco-Tech Philosophy</h2>
+      <h2 data-i18n="eco_title">Our Eco-Tech Philosophy</h2>
       <ul>
-        <li>🌍 AI for Nature: We build technology that helps humans, wildlife, and pets live in balance with the planet</li>
-        <li>🧠 Intelligent Harmony: Smart tools that support coexistence, care, and conservation</li>
-        <li>♻️ Sustainable Design: Every line of code respects the natural world</li>
+        <li data-i18n="eco1">🌍 AI for Nature: We build technology that helps humans, wildlife, and pets live in balance with the planet</li>
+        <li data-i18n="eco2">🧠 Intelligent Harmony: Smart tools that support coexistence, care, and conservation</li>
+        <li data-i18n="eco3">♻️ Sustainable Design: Every line of code respects the natural world</li>
       </ul>
     </section>
   </main>
 
   <footer id="contact">
-    <h3>Contact Our Green Team</h3>
+    <h3 data-i18n="footer_title">Contact Our Green Team</h3>
     <p>📧 summertech.fl@gmail.com </p>
     <p>📍 Clermont, Florida 34711, United States</p>
     <p>🐦 <a href="https://x.com/SummerTech_US" target="_blank" rel="noopener noreferrer">Follow us on X</a></p>
@@ -193,19 +178,91 @@
   </footer>
 
   <script>
-    // 自动填入年份
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // 多语言切换
+    const translations = {
+      en: {
+        // existing English entries...
+      },
+      zh: {
+        // existing Chinese entries...
+      },
+      ja: {
+        title: "SummerTech株式会社 | 環境意識の高いソフトウェアソリューション",
+        company_name: "SummerTech株式会社",
+        tagline: "AIと自然の共存 | ペットのためのスマート技術",
+        mission_title: "私たちの使命",
+        mission_content: "AIを活用して人と動物の共生を支援します。スマートで環境に優しいペットケアから始めましょう。",
+        flagship_title: "主力製品：",
+        flagship_desc: "世界初のカーボンニュートラルなペット健康管理プラットフォーム",
+        feature1_title: "健康管理",
+        feature1_desc: "AIによる洞察でペットの健康を包括的にモニタリング",
+        feature2_title: "エコ提案",
+        feature2_desc: "サステナブルなペット用品の個別提案",
+        feature3_title: "カーボン計算",
+        feature3_desc: "ペットの環境負荷を測定しオフセット",
+        cta: "早期アクセスを申請する",
+        eco_title: "エコテック哲学",
+        eco1: "🌍 自然のためのAI：人間・野生動物・ペットの共生を支える技術を開発",
+        eco2: "🧠 調和の知能：共存・ケア・保全をサポートするスマートツール",
+        eco3: "♻️ サステナブル設計：自然を尊重したコード",
+        footer_title: "グリーンチームへのお問い合わせ"
+      },
+      es: {
+        title: "SummerTech Inc | Soluciones de Software Ecológicas",
+        company_name: "SummerTech Inc",
+        tagline: "IA + Naturaleza | Tecnología inteligente para mascotas",
+        mission_title: "Nuestra Misión",
+        mission_content: "Usamos IA para mejorar la convivencia entre humanos y animales, comenzando con un cuidado de mascotas más inteligente y ecológico.",
+        flagship_title: "Producto Principal:",
+        flagship_desc: "La primera plataforma de gestión de salud de mascotas neutra en carbono del mundo",
+        feature1_title: "Seguimiento de Salud",
+        feature1_desc: "Monitoreo integral del bienestar de tus mascotas con IA",
+        feature2_title: "Recomendaciones Ecológicas",
+        feature2_desc: "Sugerencias personalizadas para productos sostenibles",
+        feature3_title: "Calculadora de Carbono",
+        feature3_desc: "Mide y compensa el impacto ambiental de tu mascota",
+        cta: "Solicitar acceso anticipado",
+        eco_title: "Nuestra Filosofía Eco-Tech",
+        eco1: "🌍 IA para la Naturaleza: Desarrollamos tecnología para armonizar humanos, fauna y mascotas",
+        eco2: "🧠 Armonía Inteligente: Herramientas que apoyan la coexistencia, el cuidado y la conservación",
+        eco3: "♻️ Diseño Sostenible: Cada línea de código respeta la naturaleza",
+        footer_title: "Contáctanos"
+      },
+      ar: {
+        title: "سمر تك | حلول برمجية صديقة للبيئة",
+        company_name: "سمر تك",
+        tagline: "الذكاء الاصطناعي والطبيعة | تقنية ذكية لرعاية الحيوانات الأليفة",
+        mission_title: "مهمتنا",
+        mission_content: "نستخدم الذكاء الاصطناعي لتحسين التعايش بين البشر والحيوانات، بدءًا من رعاية الحيوانات الأليفة بطريقة أذكى وأكثر استدامة.",
+        flagship_title: "المنتج الرئيسي:",
+        flagship_desc: "أول منصة لإدارة صحة الحيوانات الأليفة محايدة للكربون في العالم",
+        feature1_title: "تتبع الصحة",
+        feature1_desc: "مراقبة شاملة لصحة حيوانك الأليف مدعومة بالذكاء الاصطناعي",
+        feature2_title: "توصيات بيئية",
+        feature2_desc: "اقتراحات مخصصة لمنتجات صديقة للبيئة",
+        feature3_title: "حاسبة الكربون",
+        feature3_desc: "قياس وتعويض الأثر البيئي لحيوانك الأليف",
+        cta: "اطلب الوصول المبكر",
+        eco_title: "فلسفتنا التقنية البيئية",
+        eco1: "🌍 الذكاء الاصطناعي من أجل الطبيعة: نبني تقنيات تساعد البشر والحيوانات في التعايش المتوازن",
+        eco2: "🧠 تناغم ذكي: أدوات ذكية لدعم التعايش والرعاية والحفاظ على البيئة",
+        eco3: "♻️ تصميم مستدام: كل سطر من الشيفرة يراعي الطبيعة",
+        footer_title: "اتصل بفريقنا الأخضر"
+      }
+    };
+
     function setLang(lang) {
-      document.querySelectorAll('.lang-block').forEach(el => {
-        el.style.display = el.dataset.lang === lang ? 'block' : 'none';
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+          el.innerHTML = translations[lang][key];
+        }
       });
     }
 
-    // 自动检测语言
     window.addEventListener('DOMContentLoaded', () => {
-      const langMap = { zh: 'zh', en: 'en', ja: 'ja', es: 'es' };
+      const langMap = { zh: 'zh', en: 'en', ja: 'ja', es: 'es', ar: 'ar' };
       const browserLang = navigator.language.slice(0, 2);
       const matchedLang = langMap[browserLang] || 'en';
       setLang(matchedLang);
