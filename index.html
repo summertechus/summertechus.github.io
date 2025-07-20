@@ -1,19 +1,154 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Page Title</title>
-  <meta name="description" content="summertech official website">
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SummerTech Inc | Eco-Conscious Software Solutions</title>
+    <link rel="icon" href="https://fav.farm/🌱">
+    <style>
+        :root {
+            --primary: #2E8B57; /* Forest Green */
+            --secondary: #FFD700; /* Gold */
+            --accent: #3CB371; /* Medium Sea Green */
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(46, 139, 87, 0.2);
+        }
+        .logo {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+        }
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .hero-image {
+            height: 300px;
+            background: url('https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') center/cover;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+        .product-card {
+            border: 1px solid #e1e4e8;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 3rem 0;
+            background: white;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+        }
+        .cta-button {
+            display: inline-block;
+            background: var(--secondary);
+            color: #222;
+            padding: 14px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
+        }
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding: 2rem;
+            background: #f8f9fa;
+            border-radius: 8px 8px 0 0;
+        }
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .feature-item {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+        @media (max-width: 768px) {
+            .logo { font-size: 2.2rem; }
+            .hero-image { height: 200px; }
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <div class="logo">SummerTech Inc</div>
+        <div class="tagline">Clermont, Florida | Building Sustainable Digital Futures</div>
+    </header>
 
-  <h1>This is a Heading</h1>
-  <p>This is a paragraph.</p>
+    <div class="hero-image"></div>
 
+    <main>
+        <section>
+            <h2>Our Mission</h2>
+            <p>As pioneers in eco-conscious software development, we create digital solutions that reduce carbon footprints and promote environmental sustainability without compromising functionality.</p>
+        </section>
+
+        <section class="product-card">
+            <h2>🚀 Flagship Product: Pawpy</h2>
+            <p>The world's first carbon-neutral pet health management platform featuring:</p>
+            
+            <div class="feature-list">
+                <div class="feature-item">
+                    <h3>🐾 Health Tracking</h3>
+                    <p>Comprehensive wellness monitoring for your pets with AI-driven insights</p>
+                </div>
+                <div class="feature-item">
+                    <h3>🌱 Eco-Recommendations</h3>
+                    <p>Personalized suggestions for sustainable pet products</p>
+                </div>
+                <div class="feature-item">
+                    <h3>♻️ Carbon Calculator</h3>
+                    <p>Measure and offset your pet's environmental impact</p>
+                </div>
+            </div>
+
+            <a href="#contact" class="cta-button">Request Early Access</a>
+        </section>
+
+        <section>
+            <h2>Our Eco-Tech Principles</h2>
+            <ul>
+                <li>✅ Green Hosting: All our solutions run on renewable energy-powered servers</li>
+                <li>✅ Efficient Code: Optimized algorithms that reduce energy consumption</li>
+                <li>✅ Paperless Workflows: Digital-first approach to minimize waste</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <h3>Contact Our Green Team</h3>
+        <p>📧 hello@summertech.us | 📞 (407) XXX-XXXX</p>
+        <p>📍 Clermont, Florida 34711, United States</p>
+        <p style="margin-top: 1rem;">© 2025 SummerTech Inc. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Dynamic year update
+        document.querySelector('footer p:last-child').innerHTML = 
+            `© ${new Date().getFullYear()} SummerTech Inc. All rights reserved.`;
+    </script>
 </body>
-<footer style="margin-top:50px;color:#666;">
-  <p>SummerTech Inc. All Rights Reserved.</p>
-</footer>
 </html>
-
-
