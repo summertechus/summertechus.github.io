@@ -55,6 +55,11 @@
       border: none;
       cursor: pointer;
     }
+    .product-logo {
+      max-height: 30px;
+      vertical-align: middle;
+      margin-left: 10px;
+    }
     .product-card {
       border: 1px solid #e1e4e8;
       border-radius: 12px;
@@ -106,12 +111,15 @@
     @media (max-width: 768px) {
       .logo { font-size: 2.2rem; }
       header img { height: 50px; }
+      .product-logo {
+        max-height: 24px;
+        margin-left: 6px;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-<!--     <img src="logo_images/white_logoword.png" alt="SummerTech Logo"> -->
     <div class="logo">SummerTech Inc</div>
     <div class="tagline">AI + Nature | Smart Pet Tech for a Better World</div>
     <div class="language-switcher">
@@ -141,8 +149,7 @@
     </section>
 
     <section class="product-card">
-      <h2>🚀 Flagship Product: <img src="logo_images/white_logoword.png" alt="SummerTech Logo"></h2>
-<!--       pawpy logo -->
+      <h2>🚀 Flagship Product: <img src="logo_images/white_logoword.png" alt="Pawpy Logo" class="product-logo"></h2>
       <p>The world's first carbon-neutral pet health management platform featuring:</p>
       <div class="feature-list">
         <div class="feature-item">
