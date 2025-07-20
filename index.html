@@ -182,18 +182,30 @@
 
   <footer id="contact">
     <h3>Contact Our Green Team</h3>
-    <p>📧 hello@summertech.us | 📞 (786) 625-2557</p>
+    <p>📧 summertech.fl@gmail.com </p>
     <p>📍 Clermont, Florida 34711, United States</p>
+    <p>🐦 <a href="https://x.com/SummerTech_US" target="_blank" rel="noopener noreferrer">Follow us on X</a></p>
     <p style="margin-top: 1rem;">© <span id="year"></span> SummerTech Inc. All rights reserved.</p>
   </footer>
 
   <script>
+    // 自动填入年份
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // 多语言切换
     function setLang(lang) {
       document.querySelectorAll('.lang-block').forEach(el => {
         el.style.display = el.dataset.lang === lang ? 'block' : 'none';
       });
     }
+
+    // 自动检测语言
+    window.addEventListener('DOMContentLoaded', () => {
+      const langMap = { zh: 'zh', en: 'en', ja: 'ja', es: 'es' };
+      const browserLang = navigator.language.slice(0, 2);
+      const matchedLang = langMap[browserLang] || 'en';
+      setLang(matchedLang);
+    });
   </script>
 </body>
 </html>
