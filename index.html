@@ -3,21 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta
-  http-equiv="Content-Security-Policy"
-  content="
-    default-src 'self';
-    base-uri   'self';
-    object-src 'none';
-    form-action 'self';
-    frame-ancestors 'none';
-    img-src    'self' data: https://images.unsplash.com;
-    script-src 'self' 'unsafe-inline' https://www.youtube.com https://www.youtube-nocookie.com;
-    style-src  'self' 'unsafe-inline';
-    font-src   'self';
-    connect-src 'self';
-    frame-src  https://youtu.be/fjosYEjsC5w?si=9bhwsdlZydI9uvwd;
-    upgrade-insecure-requests;
-    block-all-mixed-content;"/>
+http-equiv="Content-Security-Policy"
+content="
+  default-src 'self';
+  base-uri 'self';
+  object-src 'none';
+  form-action 'self';
+  frame-ancestors 'none';
+  img-src 'self' data: https://images.unsplash.com;
+  script-src 'self' 'unsafe-inline' https://www.youtube.com https://www.youtube-nocookie.com;
+  style-src 'self' 'unsafe-inline';
+  font-src 'self';
+  connect-src 'self';
+  frame-src https://www.youtube.com https://www.youtube-nocookie.com;
+  upgrade-insecure-requests;
+  block-all-mixed-content;
+"/>
+
   <meta name="robots" content="noarchive">
   <meta name="referrer" content="no-referrer">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
