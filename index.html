@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+
 <meta
 http-equiv="Content-Security-Policy"
 content="
@@ -20,13 +21,13 @@ content="
   block-all-mixed-content;
 "/>
 
-
   <meta name="robots" content="noarchive">
   <meta name="referrer" content="no-referrer">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title data-i18n="title">SummerTech Inc | Eco-Conscious Software Solutions</title>
   <link rel="icon" href="logo_images/icon_transparent.png">
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
     :root {
       --primary: #2E8B57;
@@ -48,10 +49,6 @@ content="
       text-align: center;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
-    header img {
-      height: 60px;
-      margin-bottom: 1rem;
-    }
     .logo {
       font-size: 2.8rem;
       font-weight: 700;
@@ -65,22 +62,16 @@ content="
       max-width: 600px;
       margin: 0 auto;
     }
-    .language-switcher {
-      margin-top: 1rem;
-    }
-    .language-switcher button {
-      margin: 0 5px;
-      padding: 6px 12px;
-      font-weight: 600;
-      border-radius: 4px;
+
+    iframe {
+      width: 100%;
+      height: 420px;
       border: none;
-      cursor: pointer;
+      margin: 2rem 0;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
     }
-    .product-logo {
-      max-height: 30px;
-      vertical-align: middle;
-      margin-left: 10px;
-    }
+
     .product-card {
       border: 1px solid #e1e4e8;
       border-radius: 12px;
@@ -89,22 +80,7 @@ content="
       background: white;
       box-shadow: 0 6px 16px rgba(0,0,0,0.08);
     }
-    .cta-button {
-      display: inline-block;
-      background: var(--secondary);
-      color: #222;
-      padding: 14px 28px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: 600;
-      margin-top: 1.5rem;
-      transition: all 0.3s ease;
-      border: 2px solid transparent;
-    }
-    .cta-button:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
-    }
+
     footer {
       text-align: center;
       margin-top: 4rem;
@@ -112,113 +88,62 @@ content="
       background: #f8f9fa;
       border-radius: 8px 8px 0 0;
     }
-    .feature-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      margin: 2rem 0;
-    }
-    .feature-item {
-      background: #f8f9fa;
-      padding: 1.5rem;
-      border-radius: 8px;
-    }
-    iframe {
-      width: 100%;
-      height: 315px;
-      border: none;
-      margin: 2rem 0;
-    }
-    @media (max-width: 768px) {
-      .logo { font-size: 2.2rem; }
-      header img { height: 50px; }
-      .product-logo {
-        max-height: 24px;
-        margin-left: 6px;
-      }
-    }
   </style>
 </head>
+
 <body>
   <header>
     <div class="logo" data-i18n="company_name">SummerTech Inc</div>
-    <div class="tagline" data-i18n="tagline">AI + Nature | Smart Pet Tech for a Better World</div>
-    <div class="language-switcher">
-      <button onclick="setLang('en')">English</button>
-      <button onclick="setLang('zh')">中文</button>
-      <button onclick="setLang('ja')">日本語</button>
-      <button onclick="setLang('es')">Español</button>
-      <button onclick="setLang('ar')">العربية</button>
+    <div class="tagline" data-i18n="tagline">
+      AI + Nature | Smart Pet Tech for a Better World
     </div>
   </header>
 
   <main>
     <section>
-      <h2 data-i18n="mission_title">Our Mission</h2>
-      <p data-i18n="mission_content">We use AI to improve how humans and animals live together — starting with smarter, greener pet care. Our technology helps pet lovers track, care, and give back to nature, all in one platform.</p>
+      <h2>Our Mission</h2>
+      <p>
+        We use AI to improve how humans and animals live together — starting with smarter,
+        greener pet care. Our technology helps pet lovers track, care, and give back to nature,
+        all in one platform.
+      </p>
     </section>
 
     <section class="product-card">
-      <h2>🚀 <span data-i18n="flagship_title">Flagship Product:</span> <img src="logo_images/white_logoword.png" alt="Pawpy Logo" class="product-logo"></h2>
-      <p data-i18n="flagship_desc">The world's first carbon-neutral pet health management platform featuring:</p>
-      <div class="feature-list">
-        <div class="feature-item">
-          <h3>🐾 <span data-i18n="feature1_title">Health Tracking</span></h3>
-          <p data-i18n="feature1_desc">Comprehensive wellness monitoring for your pets with AI-driven insights</p>
-        </div>
-        <div class="feature-item">
-          <h3>🌱 <span data-i18n="feature2_title">Eco-Recommendations</span></h3>
-          <p data-i18n="feature2_desc">Personalized suggestions for sustainable pet products</p>
-        </div>
-        <div class="feature-item">
-          <h3>♻️ <span data-i18n="feature3_title">Carbon Calculator</span></h3>
-          <p data-i18n="feature3_desc">Measure and offset your pet's environmental impact</p>
-        </div>
-      </div>
-      <a href="#contact" class="cta-button" data-i18n="cta">Request Early Access</a>
+      <h2>🚀 Flagship Product: Pawpy</h2>
+      <p>
+        The world's first carbon-neutral pet health management platform featuring AI insights,
+        eco-recommendations, and a carbon calculator for your pet.
+      </p>
     </section>
 
-    <iframe src="https://www.youtube.com/embed/tntOCGkgt98" allowfullscreen></iframe>
+    <!-- ✅ 你的 YouTube 视频（已修正） -->
+    <iframe 
+      src="https://www.youtube-nocookie.com/embed/fjosYEjsC5w"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen>
+    </iframe>
 
     <section>
-      <h2 data-i18n="eco_title">Our Eco-Tech Philosophy</h2>
+      <h2>Our Eco-Tech Philosophy</h2>
       <ul>
-        <li data-i18n="eco1">🌍 AI for Nature: We build technology that helps humans, wildlife, and pets live in balance with the planet</li>
-        <li data-i18n="eco2">🧠 Intelligent Harmony: Smart tools that support coexistence, care, and conservation</li>
-        <li data-i18n="eco3">♻️ Sustainable Design: Every line of code respects the natural world</li>
+        <li>🌍 AI for Nature</li>
+        <li>🧠 Intelligent Harmony</li>
+        <li>♻️ Sustainable Design</li>
       </ul>
     </section>
   </main>
 
   <footer id="contact">
-    <h3 data-i18n="footer_title">Contact Our Green Team</h3>
-    <p>📧 summertech.fl@gmail.com </p>
+    <h3>Contact Our Green Team</h3>
+    <p>📧 summertech.fl@gmail.com</p>
     <p>📍 Clermont, Florida 34711, United States</p>
-    <p>🐦 <a href="https://x.com/SummerTech_US" target="_blank" rel="noopener noreferrer">Follow us on X</a></p>
-    <p style="margin-top: 1rem;">© <span id="year"></span> SummerTech Inc. All rights reserved.</p>
+    <p>© <span id="year"></span> SummerTech Inc.</p>
   </footer>
 
-  <script src="translations.js"></script>
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
-
-    function setLang(lang) {
-      const elements = document.querySelectorAll('[data-i18n]');
-      elements.forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        const translation = translations[lang]?.[key];
-        if (translation) {
-          el.innerHTML = translation;
-        }
-      });
-    }
-
-    window.addEventListener('DOMContentLoaded', () => {
-      const langMap = { zh: 'zh', en: 'en', ja: 'ja', es: 'es', ar: 'ar' };
-      const browserLang = navigator.language.slice(0, 2);
-      const matchedLang = langMap[browserLang] || 'en';
-      setLang(matchedLang);
-    });
   </script>
 </body>
 </html>
