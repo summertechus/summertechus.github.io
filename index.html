@@ -2,23 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
- <meta
+<meta
 http-equiv="Content-Security-Policy"
 content="
-  default-src 'self';
+  default-src 'self' https://www.youtube.com https://www.youtube-nocookie.com https://*.googlevideo.com;
   base-uri 'self';
   object-src 'none';
   form-action 'self';
   frame-ancestors 'none';
-  img-src 'self' data: https://images.unsplash.com;
+  img-src 'self' data: https://images.unsplash.com https://i.ytimg.com;
   script-src 'self' 'unsafe-inline' https://www.youtube.com https://www.youtube-nocookie.com;
   style-src 'self' 'unsafe-inline';
-  font-src 'self';
-  connect-src 'self';
+  font-src 'self' https://fonts.gstatic.com;
+  connect-src 'self' https://*.googlevideo.com;
   frame-src https://www.youtube.com https://www.youtube-nocookie.com;
   upgrade-insecure-requests;
   block-all-mixed-content;
 "/>
+
 
   <meta name="robots" content="noarchive">
   <meta name="referrer" content="no-referrer">
