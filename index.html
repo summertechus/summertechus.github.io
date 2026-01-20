@@ -121,22 +121,52 @@
       padding: 1.5rem;
       border-radius: 8px;
     }
-    /* 替换 iframe 样式给本地 video */
-    video {
+
+    /* Hero 视频播放器 */
+    .hero-video {
+      position: relative;
       width: 100%;
-      height: 420px;
-      border-radius: 12px;
+      max-height: 100vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #000;
       margin: 2rem 0;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    }
+    .video-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    .video-container video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 0;
+    }
+    .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 5rem;
+      color: #fff;
+      cursor: pointer;
+      background: rgba(0,0,0,0.3);
+      border-radius: 50%;
+      padding: 1rem 1.2rem;
+      transition: background 0.3s;
+      z-index: 2;
+    }
+    .play-button:hover {
+      background: rgba(0,0,0,0.6);
     }
     @media (max-width: 768px) {
       .logo { font-size: 2.2rem; }
       header img { height: 50px; }
-      .product-logo {
-        max-height: 24px;
-        margin-left: 6px;
-      }
-      video { height: 280px; }
+      .product-logo { max-height: 24px; margin-left: 6px; }
+      .play-button { font-size: 3rem; padding: 0.6rem 0.8rem; }
     }
   </style>
 </head>
@@ -154,6 +184,17 @@
   </header>
 
   <main>
+    <!-- Hero 视频 -->
+    <section class="hero-video">
+      <div class="video-container">
+        <video id="heroVideo" poster="logo_images/video_placeholder.jpg" playsinline>
+          <source src="comp_v1.mp4" type="video/mp4">
+          你的浏览器不支持视频播放。
+        </video>
+        <div class="play-button" id="playButton">▶️</div>
+      </div>
+    </section>
+
     <section>
       <h2 data-i18n="mission_title">Our Mission</h2>
       <p data-i18n="mission_content">
@@ -183,12 +224,6 @@
       </div>
       <a href="#contact" class="cta-button" data-i18n="cta">Request Early Access</a>
     </section>
-
-    <!-- ✅ 替换 YouTube iframe 为本地视频 -->
-    <video controls autoplay muted>
-      <source src="comp_v1.mp4" type="video/mp4">
-      你的浏览器不支持视频播放。
-    </video>
 
     <section>
       <h2 data-i18n="eco_title">Our Eco-Tech Philosophy</h2>
@@ -226,6 +261,22 @@
       const browserLang = navigator.language.slice(0, 2);
       const matchedLang = langMap[browserLang] || 'en';
       setLang(matchedLang);
+    });
+
+    // Hero 视频点击播放
+    const video = document.getElementById('heroVideo');
+    const playBtn = document.getElementById('playButton');
+
+    playBtn.addEventListener('click', () => {
+      video.play();
+      playBtn.style.display = 'none';
+    });
+
+    video.addEventListener('click', () => {
+      if(video.paused) {
+        video.play();
+        playBtn.style.display = 'none';
+      }
     });
   </script>
 </body>
